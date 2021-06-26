@@ -1,0 +1,36 @@
+<!-- <div class="menu">
+    <div *ngIf="currentWindowWidth>599" fxLayout="row" fxLayoutAlign="space-between center">
+        <img src="/assets/img/logo-pr.png" alt="" class="logo-img">
+        <span>Polaris-Rayon</span>
+    </div>
+
+    <div *ngFor="let itemFooterMenu of itemsFooterMenu; let indexItem = index">
+        <a routerLink="{{ itemFooterMenu.utilRoute }}" routerLinkActive #rla="routerLinkActive">
+            <button class="mat-raised-button" mat-raised-button [color]="rla.isActive ? 'primary' : ''">
+
+                <div *ngIf="currentWindowWidth<600; else labels">
+                    <mat-icon [color]="rla.isActive ? '' : 'primary'">{{ itemFooterMenu.matIcon }}</mat-icon>
+                </div>
+                <ng-template #labels>
+                    {{ itemFooterMenu.label }}
+                </ng-template>
+            </button>
+        </a>
+    </div>
+</div> -->
+
+<div class="menu">
+    <div *ngIf="currentWindowWidth>599" fxLayout="row" fxLayoutAlign="space-between center">
+        <img src="/assets/img/logo-pr.png" alt="" class="logo-img">
+    </div>
+
+    <div *ngFor="let itemFooterMenu of itemsFooterMenu; let indexItem = index">
+        <a routerLink="{{ itemFooterMenu.utilRoute }}" routerLinkActive #rla="routerLinkActive">
+            <button class="mat-raised-button" mat-raised-button [color]="rla.isActive ? 'primary' : ''">
+                <div>
+                    <mat-icon [color]="rla.isActive ? '' : 'primary'">{{ itemFooterMenu.matIcon }}</mat-icon>
+                </div>
+            </button>
+        </a>
+    </div>
+</div>

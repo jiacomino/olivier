@@ -1,0 +1,48 @@
+@import "../../../assets/scss/scss-variable.scss";
+
+//GENERAL----------------------------
+.mat-icon {
+    vertical-align: middle;
+}
+
+.mat-raised-button {
+    line-height: 48px;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+// MOBILE----------------------------
+@media #{$information-phone} {
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .menu > div {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+    }
+}
+
+// TABLETTE LANDSCAPE-----------------
+@media #{$information-pad-landscape} {
+    .menu {
+        flex-direction: column;
+        padding: 20px 0;
+        width: 60px;
+        height: 100vh;
+        border-left: 1px solid #eee5e5;
+    }
+
+    .logo-img {
+        padding-bottom: 20px;
+        margin: auto;
+    }
+}

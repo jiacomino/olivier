@@ -1,0 +1,18 @@
+<div *ngIf="isDisplayProduct" class="product-zone">
+  <img class="position-img" src="/assets/img/chaussure_150.png" alt="Affichage chaussure running">
+
+  <table mat-table [dataSource]="dataSourceObs" class="mat-elevation-z8 position-table">
+    <ng-container matColumnDef="criteres">
+      <th mat-header-cell *matHeaderCellDef>Critères</th>
+      <td mat-cell *matCellDef="let element"> {{element.codeModele}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="resultats">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element"> {{element.codeModele}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

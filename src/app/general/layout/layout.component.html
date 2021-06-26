@@ -1,0 +1,11 @@
+<div class="wrapper" fxLayout="column" fxLayoutAlign="space-around center">
+    <div class="main-utility">
+        <mat-card [@routeAnimations]="prepareRoute(outlet)" class="zone-utility">
+            <router-outlet #outlet="outlet"></router-outlet>
+        </mat-card>
+    </div>
+
+    <div class="menu-footer">
+        <app-menu-footer></app-menu-footer>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+<!-- On supprime le header pour mettre son contenu sous forme de titre dans une <mat-card>, intégration de <app-product> -->
+
+<div id="price-utility">
+    <!-- STEPPER ---------------------------------------->
+    <mat-card>
+    <!-- SCAN REFERENCE INPUT -->
+    <div id="stepper">
+        <mat-card-header>
+            <mat-card-title>{{ msgPriceZone }}</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <mat-vertical-stepper [linear]="isLinear" #stepper (selectionChange)="onChange($event)">
+                <mat-step [stepControl]="refFormGroup" label="Scannez une référence">
+                    <form [formGroup]="refFormGroup">
+                        <ng-template matStepLabel>Saisissez un prix</ng-template>
+                        <div class="flexInput">
+                            <mat-form-field>
+                                <input matInput id="input0" autocomplete="off" formControlName="reference"
+                                    placeholder="EAN13" required>
+                            </mat-form-field>
+                            <div>
+                                <button mat-mini-fab color="primary" (click)="onCheckRef()" matStepperNext
+                                    aria-label="Example icon button with a heart icon">
+                                    <mat-icon>done</mat-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </mat-step>
+
+                <!-- SCAN ZONE INPUT -->
+                <mat-step [stepControl]="zoneFormGroup" label="Scannez une zone">
+                    <form [formGroup]="zoneFormGroup">
+                        <ng-template matStepLabel>Faire un truc</ng-template>
+                        <div class="flexInput">
+                            <mat-form-field>
+                                <input matInput id="input1" autocomplete="off" formControlName="zone"
+                                    placeholder="Zonage" required>
+                            </mat-form-field>
+                            <div>
+                                <button mat-mini-fab color="primary" (click)="resetStepper(0)" matStepperNext
+                                    aria-label="icon button with a symbol enter icon">
+                                    <mat-icon>done</mat-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </mat-step>
+            </mat-vertical-stepper>
+        </mat-card-content>
+    </div>
+    </mat-card>
+
+    <!-- PRODUCT ----------------------------------------->
+    <div id="product">
+        <mat-card>
+            <app-product></app-product>
+        </mat-card>
+    </div>
+</div>

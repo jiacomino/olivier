@@ -1,0 +1,22 @@
+{
+  "product": [
+    {
+      "codeModele": "545ty",
+      "codeLibelle": "879rty",
+      "stock": 77,
+      "prixTTC": 85,
+      "couleur": "bleu",
+      "matiere": "laine",
+      "zone": "f15"
+    },
+    {
+      "codeModele": "3223er",
+      "codeLibelle": "opl84",
+      "stock": 12,
+      "prixTTC": 29,
+      "couleur": "rouge",
+      "matiere": "coton",
+      "zone": "k14"
+    }
+  ]
+}

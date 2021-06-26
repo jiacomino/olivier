@@ -1,0 +1,31 @@
+@import "../../../assets/scss/scss-variable.scss";
+
+// GENERAL---------------------------
+
+.mat-form-field {
+    width: 100%;
+}
+
+
+// MOBILE----------------------------
+@media #{$information-phone} {
+    
+}
+
+.flexInput {
+    display: flex;
+}
+
+.blue-snackbar {
+    background-color: #4791db;
+    color: rgb(255, 255, 255);
+}
+
+
+
+// TABLETTE LANDSCAPE-----------------
+@media #{$information-pad-landscape} {
+    #zone-utility {
+        display: flex;
+    }
+}

@@ -1,0 +1,23 @@
+@import "../../../assets/scss/scss-variable.scss";
+
+// MOBILE----------------------------
+@media #{$information-phone} {
+    .wrapper {
+        height: 100vh;
+    }
+}
+
+@media #{$information-pad-landscape} {
+    .wrapper {
+        display: flex;
+    }
+
+    .wrapper,
+    .main-utility {
+        display: flex;
+    }
+
+    .zone-utility {
+        border-right: 1px solid #eee5e5;
+    }
+}
